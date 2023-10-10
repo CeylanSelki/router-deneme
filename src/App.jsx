@@ -54,13 +54,9 @@ function App() {
                 }
                 return response.json();
             })
-            .then(data => setPosts(data))
-            .catch(err => setError(err.message));
+            .then(data => setPosts(data));
     }, []);
 
-    if (error) {
-        return <div>Hata: {error}</div>;
-    }
 
     return (
         <div className="post-container">
